@@ -25,8 +25,13 @@ vim.keymap.set('n', '<C-e>', ':Neotree toggle<CR>', {})
 -- Bufferline keybindings
 vim.keymap.set('n', '<S-h>', ':bprev<CR>', {})
 vim.keymap.set('n', '<S-l>', ':bnext<CR>', {})
-vim.keymap.set('n', '<leader>bd', ':bdelete<CR>', {})
+vim.keymap.set('n', '<C-w>', ':bdelete<CR>', {})
+
+-- Lazy.nvim keybings
+vim.keymap.set('n', '<leader>ll', ':Lazy<CR>', {})
 
 -- Lazygit keybindings
-vim.keymap.set('n', '<leader>gg', ':LazyGit<CR>', {})
+vim.keymap.set('n', '<leader>lg', ':LazyGit<CR>', {})
 
+-- Persistence keybindings
+vim.keymap.set("n", "<leader>ps", [[<cmd>lua require("persistence").load()<cr>]], {})
