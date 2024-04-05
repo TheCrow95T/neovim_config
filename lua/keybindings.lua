@@ -21,3 +21,12 @@ vim.keymap.set('n', '<leader>i' , 'gg<S-v>G=', {})
 
 -- Neotree keybinding
 vim.keymap.set('n', '<C-e>', ':Neotree toggle<CR>', {})
+
+-- Bufferline keybindings
+vim.keymap.set('n', '<S-h>', ':bprev<CR>', {})
+vim.keymap.set('n', '<S-l>', ':bnext<CR>', {})
+vim.keymap.set('n', '<leader>bd', ':bdelete<CR>', {})
+
+-- Lazygit keybindings
+vim.keymap.set('n', '<leader>gg', ':LazyGit<CR>', {})
+
