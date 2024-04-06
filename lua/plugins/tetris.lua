@@ -1,3 +1,4 @@
 return {
-    "Nephys/nvim-tetris"
+    "Nephys/nvim-tetris",
+    "Eandrju/cellular-automaton.nvim"
 }

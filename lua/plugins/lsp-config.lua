@@ -3,7 +3,7 @@ return {
         "williamboman/mason.nvim",
         config = function()
             require("mason").setup()
-        end
+        end,
     },
     {
         "williamboman/mason-lspconfig.nvim",
@@ -11,20 +11,26 @@ return {
             require("mason-lspconfig").setup({
                 ensure_installed = { "lua_ls", "tsserver", "intelephense", "jsonls" },
             })
-        end
+        end,
     },
     {
         "neovim/nvim-lspconfig",
         config = function()
-            local lspconfig = require("lspconfig")
-            lspconfig.lua_ls.setup({})
-            lspconfig.tsserver.setup({})
-            lspconfig.jsonls.setup({})
-            lspconfig.intelephense.setup({})
+            local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
-            vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
-            vim.keymap.set('n', 'gd', vim.lsp.buf.definition, {})
-            vim.keymap.set('n', '<space>ca', vim.lsp.buf.code_action, {})
-        end
-    }
+            local lspconfig = require("lspconfig")
+            lspconfig.lua_ls.setup({
+                capabilities = capabilities
+            })
+            lspconfig.tsserver.setup({
+                capabilities = capabilities
+            })
+            lspconfig.jsonls.setup({
+                capabilities = capabilities
+            })
+            lspconfig.intelephense.setup({
+                capabilities = capabilities
+            })
+        end,
+    },
 }
