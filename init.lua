@@ -17,3 +17,8 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup("plugins")
+
+-- LIST OF TODO
+-- TODO: research and add test function to neovim
+-- TODO: Study nvim-lspconfig keymapping
+-- TODO: Write a README.md for future reference

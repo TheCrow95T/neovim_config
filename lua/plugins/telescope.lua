@@ -1,28 +1,30 @@
 return {
-    {
-        'nvim-telescope/telescope.nvim', tag = '0.1.6',
-        dependencies = { 'nvim-lua/plenary.nvim' },
-        config = function()
-            local builtin = require('telescope.builtin')
-            vim.keymap.set('n', '<leader><leader>', builtin.find_files, {})
-            vim.keymap.set('n', '<leader>/', builtin.live_grep, {})
-            vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
-            vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
-            vim.keymap.set('n','<leader>ft',':TodoTelescope<CR>',{})
-        end
-    },
-    {
-        'nvim-telescope/telescope-ui-select.nvim',
-        config = function()
-            require("telescope").setup {
-                extensions = {
-                    ["ui-select"] = {
-                        require("telescope.themes").get_dropdown {
-                        }
-                    }
-                }
-            }
-            require("telescope").load_extension("ui-select")
-        end
-    }
+	{
+		"nvim-telescope/telescope.nvim",
+		tag = "0.1.6",
+		dependencies = { "nvim-lua/plenary.nvim" },
+		config = function()
+			local builtin = require("telescope.builtin")
+			vim.keymap.set("n", "<leader><leader>", builtin.find_files, { desc = "Find file from current directory" })
+			vim.keymap.set("n", "<leader>/", builtin.live_grep, { desc = "Find text from current directory" })
+			vim.keymap.set("n", "<leader>fh", builtin.help_tags, { desc = "Find help tags" })
+			vim.keymap.set("n", "<leader>ft", ":TodoTelescope<CR>", { desc = "Find TODO from current directory" })
+			vim.keymap.set("n", "<leader>fp", ":Telescope projects<CR>", { desc = "Find Project" })
+			vim.keymap.set("n", "<leader>fk", ":Telescope keymaps<CR>", { desc = "Find Keymapping" })
+			vim.keymap.set("n", "<leader>fm", ":Telescope marks<CR>", { desc = "Find Mark" })
+		end,
+	},
+	{
+		"nvim-telescope/telescope-ui-select.nvim",
+		config = function()
+			require("telescope").setup({
+				extensions = {
+					["ui-select"] = {
+						require("telescope.themes").get_dropdown({}),
+					},
+				},
+			})
+			require("telescope").load_extension("ui-select")
+		end,
+	},
 }
