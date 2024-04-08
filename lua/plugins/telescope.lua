@@ -12,6 +12,7 @@ return {
 			vim.keymap.set("n", "<leader>fp", ":Telescope projects<CR>", { desc = "Find Project" })
 			vim.keymap.set("n", "<leader>fk", ":Telescope keymaps<CR>", { desc = "Find Keymapping" })
 			vim.keymap.set("n", "<leader>fm", ":Telescope marks<CR>", { desc = "Find Mark" })
+			vim.keymap.set("n", "<leader>fn", ":Telescope noice<CR>", { desc = "Find Noice message" })
 		end,
 	},
 	{
