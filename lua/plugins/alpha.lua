@@ -18,7 +18,7 @@ return {
     -- stylua: ignore
     dashboard.section.buttons.val = {
       dashboard.button("f", " " .. " Find File",       "<cmd> Telescope find_files <cr>"),
-      dashboard.button("p", " " .. " Find Projects",    "<cmd> Telescope projects <cr>"),
+      dashboard.button("p", " " .. " Find Projects",    "<cmd> Telescope project <cr>"),
       dashboard.button("s", " " .. " Restore Session", "<cmd> lua require('persistence').load() <cr>"),
       dashboard.button("l", "󰒲 " .. " Lazy",            "<cmd> Lazy <cr>"),
       dashboard.button("q", " " .. " Quit",            "<cmd> qa <cr>"),

@@ -58,4 +58,10 @@ return {
 			})
 		end,
 	},
+    {
+        "akinsho/toggleterm.nvim",
+        config = function ()
+            require("toggleterm").setup()
+        end
+    },
 }
