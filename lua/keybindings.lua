@@ -59,4 +59,5 @@ vim.keymap.set("n", "<leader>cf", vim.lsp.buf.format, { desc = "Code Formatter" 
 vim.keymap.set("n", "<leader>nn", ":NoiceDismiss<CR>", { desc = "Dismiss noice notification" })
 
 -- Open ToggleTerm
-vim.keymap.set("n", "<leader>tt", ":ToggleTerm<CR>", { desc = "Open ToggleTerm" })
+vim.keymap.set("n", "<C-t>", ":ToggleTerm<CR>", { desc = "Open ToggleTerm" })
+vim.keymap.set("t", "<C-t>", "exit<CR>", { desc = "Close ToggleTerm" })
