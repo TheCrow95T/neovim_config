@@ -9,7 +9,7 @@ return {
 		"williamboman/mason-lspconfig.nvim",
 		config = function()
 			require("mason-lspconfig").setup({
-				ensure_installed = { "lua_ls", "tsserver", "intelephense", "jsonls", "emmet_ls" },
+				ensure_installed = { "lua_ls", "tsserver", "jsonls", "intelephense", "html", "cssls", "emmet_ls" },
 			})
 		end,
 	},
