@@ -21,4 +21,5 @@ require("lazy").setup("plugins")
 -- LIST OF TODO
 -- TODO: research and add test function to neovim
 -- TODO: Study nvim-lspconfig keymapping
+-- TODO: Study eslint on why it shows error on typescript project
 -- TODO: Write a README.md for future reference
