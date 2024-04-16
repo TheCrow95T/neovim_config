@@ -28,6 +28,7 @@ return {
         "sainnhe/sonokai",
         config = function()
             vim.g.sonokai_style = "shusia"
+            vim.g.sonokai_transparent_background = 1
             vim.g.sonokai_diagnostic_virtual_text = "colored"
             vim.cmd("colorscheme sonokai")
         end,
