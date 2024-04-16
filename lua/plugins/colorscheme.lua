@@ -21,7 +21,7 @@ return {
                 },
                 palettes = {},
             })
-            -- vim.cmd("colorscheme carbonfox")
+            vim.cmd("colorscheme carbonfox")
         end,
     },
     {
@@ -30,7 +30,7 @@ return {
             vim.g.sonokai_style = "shusia"
             vim.g.sonokai_transparent_background = 1
             vim.g.sonokai_diagnostic_virtual_text = "colored"
-            vim.cmd("colorscheme sonokai")
+            -- vim.cmd("colorscheme sonokai")
         end,
     },
 }
