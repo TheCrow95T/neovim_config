@@ -13,7 +13,8 @@ return {
 					"lua_ls",
 					"tsserver",
 					"jsonls",
-					"intelephense",
+					-- "intelephense",
+					"phpactor",
 					"html",
 					"cssls",
 					"tailwindcss",
@@ -38,7 +39,10 @@ return {
 			lspconfig.jsonls.setup({
 				capabilities = capabilities,
 			})
-			lspconfig.intelephense.setup({
+			-- lspconfig.intelephense.setup({
+			-- 	capabilities = capabilities,
+			-- })
+			lspconfig.phpactor.setup({
 				capabilities = capabilities,
 			})
 			lspconfig.html.setup({

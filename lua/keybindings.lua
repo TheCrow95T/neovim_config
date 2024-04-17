@@ -52,6 +52,12 @@ vim.keymap.set("n", "K", vim.lsp.buf.hover, { desc = "Hover" })
 vim.keymap.set("n", "gd", vim.lsp.buf.definition, { desc = "Go to definition" })
 vim.keymap.set("n", "<space>ca", vim.lsp.buf.code_action, { desc = "Code action" })
 
+-- php keymapping
+vim.keymap.set("n", "<leader>la", "<cmd>GetClasses<cr>", { desc = "PHP get classes" })
+vim.keymap.set("n", "<leader>lc", "<cmd>GetClass<cr>", { desc = "PHP get class" })
+vim.keymap.set("n", "<leader>ls", "<cmd>ClassAs<cr>", { desc = "PHP class as" })
+vim.keymap.set("n", "<leader>ln", "<cmd>Namespace<cr>", { desc = "PHP Namespace" })
+
 -- none-ls code formatter
 vim.keymap.set("n", "<leader>cf", vim.lsp.buf.format, { desc = "Code Formatter" })
 
