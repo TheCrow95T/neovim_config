@@ -52,6 +52,11 @@ vim.keymap.set("n", "K", vim.lsp.buf.hover, { desc = "Hover" })
 vim.keymap.set("n", "gd", vim.lsp.buf.definition, { desc = "Go to definition" })
 vim.keymap.set("n", "<space>ca", vim.lsp.buf.code_action, { desc = "Code action" })
 
+-- laravel keymapping
+vim.keymap.set("n", "<leader>pa", ":Laravel artisan<cr>", { desc = "Laravel artisan" })
+vim.keymap.set("n", "<leader>pr", ":Laravel routes<cr>", { desc = "Laravel routes" })
+vim.keymap.set("n", "<leader>pm", ":Laravel related<cr>", { desc = "Laravel related" })
+
 -- none-ls code formatter
 vim.keymap.set("n", "<leader>cf", vim.lsp.buf.format, { desc = "Code Formatter" })
 
