@@ -40,7 +40,7 @@ return {
 				capabilities = capabilities,
 			})
 			-- lspconfig.intelephense.setup({
-			-- 	capabilities = capabilities,
+			--     capabilities = capabilities,
 			-- })
 			lspconfig.phpactor.setup({
 				capabilities = capabilities,
@@ -57,6 +57,14 @@ return {
 			lspconfig.eslint.setup({
 				capabilities = capabilities,
 			})
+			-- lspconfig.volar.setup({
+			-- 	init_options = {
+			-- 		typescript = {
+			-- 			tsdk = vim.env.HOME
+			-- 				.. "/.local/share/nvim/mason/packages/vue-language-server/node_modules/typescript/lib",
+			-- 		},
+			-- 	},
+			-- })
 			lspconfig.emmet_ls.setup({
 				capabilities = capabilities,
 				filetypes = {

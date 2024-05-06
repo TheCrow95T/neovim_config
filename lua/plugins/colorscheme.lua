@@ -16,7 +16,7 @@ return {
                     inverse = {         -- Inverse highlight for different types
                         match_paren = false,
                         visual = true,
-                        search = true,
+                        search = false,
                     },
                 },
                 palettes = {},

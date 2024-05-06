@@ -2,14 +2,16 @@
 vim.keymap.set("n", "<C-s>", ":wa<CR>", { desc = "Save all files" })
 vim.keymap.set("n", "<C-m>", ":delm! | delm A-Z0-9<CR>", { desc = "Clear Mark" })
 vim.keymap.set({ "i", "n" }, "<esc>", "<cmd>noh<cr><esc>", { desc = "Escape and Clear hlsearch" })
-vim.keymap.set("n", "<leader>r", ":lua require('persistence').load()<CR>", { desc = "Resume session" })
+vim.keymap.set("n", "<leader>s", ":lua require('persistence').load()<CR>", { desc = "Resume session" })
 
 -- Neotree keybinding
-vim.keymap.set("n", "<C-e>", ":Neotree toggle<CR>", { desc = "Toggle NeoTree" })
+vim.keymap.set("n", "<C-e>", ":Neotree position=current toggle<CR>", { desc = "Toggle NeoTree" })
 
 -- Bufferline keybindings
-vim.keymap.set("n", "<S-h>", ":bprev<CR>", { desc = "Go to previous buffer" })
-vim.keymap.set("n", "<S-l>", ":bnext<CR>", { desc = "Go to next buffer" })
+vim.keymap.set("n", "<S-h>", ":BufferLineCyclePrev<CR>", { desc = "Go to previous buffer" })
+vim.keymap.set("n", "<S-l>", ":BufferLineCycleNext<CR>", { desc = "Go to next buffer" })
+vim.keymap.set("n", "<leader><S-h>", ":BufferLineMovePrev<CR>", { desc = "Move to previous buffer" })
+vim.keymap.set("n", "<leader><S-l>", ":BufferLineMoveNext<CR>", { desc = "Move to next buffer" })
 vim.keymap.set("n", "<C-w>", ":BufDel<CR>", { desc = "Delete current buffer" })
 
 -- Move to window using the <ctrl> hjkl keys
@@ -62,6 +64,9 @@ vim.keymap.set("n", "<leader>cf", vim.lsp.buf.format, { desc = "Code Formatter" 
 
 -- Noice dismiss message
 vim.keymap.set("n", "<leader>nn", ":NoiceDismiss<CR>", { desc = "Dismiss noice notification" })
+
+-- Trouble keymapping
+vim.keymap.set("n", "<leader>cd", ":TroubleToggle workspace_diagnostics<CR>", { desc = "Trouble diagnostics" })
 
 -- Open ToggleTerm
 vim.keymap.set("n", "<C-t>", ":ToggleTerm<CR>", { desc = "Open ToggleTerm" })
