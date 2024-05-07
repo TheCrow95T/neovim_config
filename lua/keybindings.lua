@@ -8,11 +8,10 @@ vim.keymap.set("n", "<leader>s", ":lua require('persistence').load()<CR>", { des
 vim.keymap.set("n", "<C-e>", ":Neotree position=current toggle<CR>", { desc = "Toggle NeoTree" })
 
 -- Bufferline keybindings
-vim.keymap.set("n", "<S-h>", ":BufferLineCyclePrev<CR>", { desc = "Go to previous buffer" })
-vim.keymap.set("n", "<S-l>", ":BufferLineCycleNext<CR>", { desc = "Go to next buffer" })
-vim.keymap.set("n", "<leader><S-h>", ":BufferLineMovePrev<CR>", { desc = "Move to previous buffer" })
-vim.keymap.set("n", "<leader><S-l>", ":BufferLineMoveNext<CR>", { desc = "Move to next buffer" })
+vim.keymap.set("n", "<S-h>", ":bprev<CR>", { desc = "Go to previous buffer" })
+vim.keymap.set("n", "<S-l>", ":bnext<CR>", { desc = "Go to next buffer" })
 vim.keymap.set("n", "<C-w>", ":BufDel<CR>", { desc = "Delete current buffer" })
+vim.keymap.set("n", "<leader>gb", ":LualineBuffersJump", { desc = "Go to buffer index" })
 
 -- Move to window using the <ctrl> hjkl keys
 vim.keymap.set("n", "<C-h>", "<C-w>h", { desc = "Go to Left Window", remap = true })
