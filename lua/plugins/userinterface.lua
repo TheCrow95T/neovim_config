@@ -75,7 +75,7 @@ return {
 			})
 
 			-- Open parent directory in floating window
-			vim.keymap.set("n", "<space>o", require("oil").toggle_float)
+			vim.keymap.set("n", "<C-o>", require("oil").toggle_float)
 		end,
 	},
 	{
