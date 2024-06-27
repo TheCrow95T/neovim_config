@@ -1,20 +1,32 @@
 return {
 	{
-		"nvim-neo-tree/neo-tree.nvim",
-		branch = "v3.x",
-		dependencies = {
-			"nvim-lua/plenary.nvim",
-			"nvim-tree/nvim-web-devicons",
-			"MunifTanjim/nui.nvim",
-		},
+		"kelly-lin/ranger.nvim",
 		config = function()
-			require("neo-tree").setup({
-				window = {
-					position = "float", -- "float" or "current"
-				},
-				popup_border_style = "rounded",
-			})
+			require("ranger-nvim").setup({
+                replace_netrw = true,
+                ui = {
+                    height = 0.9,
+                    width = 0.9,
+                    border = "single"
+                },
+            })
 		end,
+	},
+	{
+		"vhyrro/luarocks.nvim",
+		priority = 1001, -- this plugin needs to run before anything else
+		opts = {
+			rocks = { "magick" },
+		},
+	},
+	{
+		"3rd/image.nvim",
+		dependencies = { "luarocks.nvim" },
+        config = function ()
+            require("image").setup({
+                window_overlap_clear_enabled = true
+            })
+        end
 	},
 	{
 		"nvim-lualine/lualine.nvim",

@@ -6,7 +6,12 @@ vim.keymap.set("n", "<leader>s", ":lua require('persistence').load()<CR>", { des
 
 -- Neotree keybinding
 -- vim.keymap.set("n", "<C-e>", ":Neotree toggle<CR>", { desc = "Toggle NeoTree" })
-vim.keymap.set("n", "<C-e>", ":Neotree position=current toggle<CR>", { desc = "Toggle NeoTree" })
+vim.api.nvim_set_keymap("n", "<C-e>", "", {
+    noremap = true,
+    callback = function()
+        require("ranger-nvim").open(true)
+    end,
+})
 
 -- Bufferline keybindings
 vim.keymap.set("n", "<S-h>", ":BufferLineCyclePrev<CR>", { desc = "Go to previous buffer" })
