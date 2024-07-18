@@ -9,4 +9,8 @@ opt.relativenumber=true
 opt.clipboard="unnamedplus"
 opt.scrolloff=4
 opt.sidescrolloff=8
+opt.ignorecase = true -- search case insensitive
+opt.smartcase = true -- search matters if capital letter
+opt.undofile = true -- save undo history
+
 vim.g.mapleader = " "
