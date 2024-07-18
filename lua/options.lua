@@ -1,9 +1,12 @@
-vim.cmd("set expandtab")
-vim.cmd("set tabstop=4")
-vim.cmd("set softtabstop=4")
-vim.cmd("set shiftwidth=4")
-vim.cmd("set number relativenumber")
-vim.cmd("set clipboard+=unnamedplus")
-vim.cmd(":set scrolloff=4")
-vim.cmd(":set sidescrolloff=8")
+local opt = vim.opt
+
+opt.expandtab=true
+opt.tabstop=4
+opt.softtabstop=4
+opt.shiftwidth=4
+opt.number=true
+opt.relativenumber=true
+opt.clipboard="unnamedplus"
+opt.scrolloff=4
+opt.sidescrolloff=8
 vim.g.mapleader = " "

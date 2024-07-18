@@ -24,7 +24,9 @@ return {
 		dependencies = { "luarocks.nvim" },
         config = function ()
             require("image").setup({
-                window_overlap_clear_enabled = true
+                -- backend = "ueberzug",
+                window_overlap_clear_enabled = true,
+                tmux_show_only_in_active_window = true,
             })
         end
 	},
