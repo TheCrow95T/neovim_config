@@ -1,5 +1,14 @@
 return {
-	"Nephys/nvim-tetris",
-	"Eandrju/cellular-automaton.nvim",
-	"NStefan002/donut.nvim",
+    {
+        "Nephys/nvim-tetris",
+        event = "VeryLazy",
+    },
+    {
+        "Eandrju/cellular-automaton.nvim",
+        event = "VeryLazy",
+    },
+    {
+        "NStefan002/donut.nvim",
+        event = "VeryLazy",
+    },
 }

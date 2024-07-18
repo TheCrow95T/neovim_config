@@ -1,19 +1,21 @@
 return {
 	{
 		"kelly-lin/ranger.nvim",
+		event = "VeryLazy",
 		config = function()
 			require("ranger-nvim").setup({
-                replace_netrw = true,
-                ui = {
-                    height = 0.9,
-                    width = 0.9,
-                    border = "single"
-                },
-            })
+				replace_netrw = true,
+				ui = {
+					height = 0.9,
+					width = 0.9,
+					border = "single",
+				},
+			})
 		end,
 	},
 	{
 		"vhyrro/luarocks.nvim",
+		event = "VeryLazy",
 		priority = 1001, -- this plugin needs to run before anything else
 		opts = {
 			rocks = { "magick" },
@@ -21,17 +23,19 @@ return {
 	},
 	{
 		"3rd/image.nvim",
+		event = "VeryLazy",
 		dependencies = { "luarocks.nvim" },
-        config = function ()
-            require("image").setup({
-                -- backend = "ueberzug",
-                window_overlap_clear_enabled = true,
-                tmux_show_only_in_active_window = true,
-            })
-        end
+		config = function()
+			require("image").setup({
+				-- backend = "ueberzug",
+				window_overlap_clear_enabled = true,
+				tmux_show_only_in_active_window = true,
+			})
+		end,
 	},
 	{
 		"nvim-lualine/lualine.nvim",
+		event = { "BufReadPost", "BufWritePost", "BufNewFile" },
 		config = function()
 			require("lualine").setup({
 				options = {
@@ -61,6 +65,7 @@ return {
 	},
 	{
 		"akinsho/bufferline.nvim",
+		event = { "BufReadPost", "BufWritePost", "BufNewFile" },
 		version = "*",
 		config = function()
 			vim.opt.termguicolors = true
@@ -74,29 +79,12 @@ return {
 		end,
 	},
 	{
-		"stevearc/oil.nvim",
-		dependencies = { "nvim-tree/nvim-web-devicons" },
-		config = function()
-			require("oil").setup({
-				columns = { "icon" },
-				keymaps = {
-					["<C-h>"] = false,
-					["<M-h>"] = "actions.select_split",
-				},
-				view_options = {
-					show_hidden = true,
-				},
-			})
-
-			-- Open parent directory in floating window
-			vim.keymap.set("n", "<C-o>", require("oil").toggle_float)
-		end,
-	},
-	{
 		"ojroques/nvim-bufdel",
+		event = "VeryLazy",
 	},
 	{
 		"lewis6991/gitsigns.nvim",
+		event = "VeryLazy",
 		config = function()
 			require("gitsigns").setup()
 		end,
@@ -147,6 +135,7 @@ return {
 	},
 	{
 		"akinsho/toggleterm.nvim",
+		event = "VeryLazy",
 		config = function()
 			require("toggleterm").setup()
 		end,
