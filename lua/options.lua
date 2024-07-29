@@ -12,5 +12,6 @@ opt.sidescrolloff=8
 opt.ignorecase = true -- search case insensitive
 opt.smartcase = true -- search matters if capital letter
 opt.undofile = true -- save undo history
+opt.mouse = 'a'
 
 vim.g.mapleader = " "
