@@ -12,7 +12,6 @@ return {
             sources = {
                 null_ls.builtins.formatting.stylua,
                 null_ls.builtins.formatting.prettier,
-                null_ls.builtins.formatting.sqlfmt,
                 -- null_ls.builtins.formatting.phpcsfixer,
                 -- null_ls.builtins.formatting.blade_formatter,
                 -- null_ls.builtins.diagnostics.phpcs,
