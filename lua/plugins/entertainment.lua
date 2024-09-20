@@ -7,8 +7,8 @@ return {
         "Eandrju/cellular-automaton.nvim",
         event = "VeryLazy",
     },
-    {
-        "NStefan002/donut.nvim",
-        event = "VeryLazy",
-    },
+    -- {
+    --     "NStefan002/donut.nvim",
+    --     event = "VeryLazy",
+    -- },
 }

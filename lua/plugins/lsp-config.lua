@@ -13,7 +13,7 @@ return {
             require("mason-lspconfig").setup({
                 ensure_installed = {
                     "lua_ls",
-                    "tsserver",
+                    "ts_ls",
                     "jsonls",
                     -- "intelephense",
                     "phpactor",
@@ -36,18 +36,18 @@ return {
             lspconfig.lua_ls.setup({
                 capabilities = capabilities,
             })
-            lspconfig.tsserver.setup({
+            lspconfig.ts_ls.setup({
                 capabilities = capabilities,
             })
             lspconfig.jsonls.setup({
                 capabilities = capabilities,
             })
-            -- lspconfig.intelephense.setup({
-            --     capabilities = capabilities,
-            -- })
-            lspconfig.phpactor.setup({
+            lspconfig.intelephense.setup({
                 capabilities = capabilities,
             })
+            -- lspconfig.phpactor.setup({
+            --     capabilities = capabilities,
+            -- })
             lspconfig.html.setup({
                 capabilities = capabilities,
             })
@@ -58,6 +58,9 @@ return {
                 capabilities = capabilities,
             })
             lspconfig.eslint.setup({
+                capabilities = capabilities,
+            })
+            lspconfig.sqlls.setup({
                 capabilities = capabilities,
             })
             -- lspconfig.volar.setup({
