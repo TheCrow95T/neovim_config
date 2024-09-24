@@ -40,6 +40,9 @@ keymap("n", "<C-Right>", "<cmd>vertical resize +2<cr>", { desc = "Increase Windo
 keymap("n", "<leader>\\", "<cmd>vs<cr>", { desc = "Vertical split" })
 keymap("n", "<leader>-", "<cmd>split<cr>", { desc = "Horizontal split" })
 
+-- Toggle focus windows
+keymap("n", "<M-z>", "<cmd>lua require('maximizer').toggle()<cr>", { desc = "Toggle Focus window" })
+
 -- tmux keymapping
 keymap("n", "<C-\\>", "<cmd>TmuxNavigatePrevious<cr>", { desc = "Go to the previous pane" })
 keymap("n", "<C-h>", "<cmd>TmuxNavigateLeft<cr>", { desc = "Got to the left pane" })
