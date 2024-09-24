@@ -1,6 +1,7 @@
 local keymap = vim.keymap.set
 
 -- General keybinding
+vim.cmd('vnoremap c "_c')
 keymap("n", "<C-s>", ":wa<CR>", { desc = "Save all files" })
 keymap("n", "<C-m>", ":delm! | delm A-Z0-9<CR>", { desc = "Clear Mark" })
 keymap({ "i", "n" }, "<esc>", "<cmd>noh<cr><esc>", { desc = "Escape and Clear hlsearch" })
