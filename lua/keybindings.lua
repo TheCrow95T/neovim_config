@@ -80,7 +80,7 @@ keymap("n", "<leader>cf", vim.lsp.buf.format, { desc = "Code Formatter" })
 keymap("n", "<leader>nn", "<cmd>NoiceDismiss<CR>", { desc = "Dismiss noice notification" })
 
 -- Trouble keymapping
-keymap("n", "<leader>cd", "<cmd>TroubleToggle workspace_diagnostics<CR>", { desc = "Trouble diagnostics" })
+keymap("n", "<leader>cd", "<cmd>Trouble diagnostics toggle<CR>", { desc = "Trouble diagnostics" })
 
 -- Open ToggleTerm
 keymap("n", "<C-t>", "<cmd>lua require('FTerm').toggle()<CR>", { desc = "Open ToggleTerm" })
