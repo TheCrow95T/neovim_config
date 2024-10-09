@@ -57,8 +57,14 @@ return {
     config = function()
       vim.keymap.set(
         "n",
-        "<Space>m",
+        "<Space>ma",
         "<cmd>lua require('harpoon.mark').add_file()<CR>",
+        { desc = "Harpoon add file" }
+      )
+      vim.keymap.set(
+        "n",
+        "<Space>mm",
+        "<cmd>lua require('harpoon.ui').toggle_quick_menu()<CR>",
         { desc = "Harpoon add file" }
       )
     end,

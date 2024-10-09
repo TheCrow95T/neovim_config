@@ -47,7 +47,6 @@ return {
       keymap("n", "<leader>fp", ":Telescope project<CR>", { desc = "Find Project" })
       keymap("n", "<leader>fi", ":Telescope media_files<CR>", { desc = "Find media files" })
       keymap("n", "<leader>fk", ":Telescope keymaps<CR>", { desc = "Find Keymapping" })
-      keymap("n", "<leader>fm", ":Telescope harpoon marks<CR>", { desc = "Find Mark" })
       keymap("n", "<leader>fn", ":Telescope noice<CR>", { desc = "Find Noice message" })
       keymap("n", "<leader>fb", ":Telescope buffers<CR>", { desc = "Find buffers" })
       keymap("n", "<leader>fc", ":Telescope colorscheme<CR>", { desc = "Find buffers" })
