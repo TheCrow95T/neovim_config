@@ -84,6 +84,7 @@ return {
                     "javascript",
                     "typescript",
                     "vue",
+                    "blade",
                 },
                 init_options = {
                     html = {

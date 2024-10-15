@@ -18,6 +18,18 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup("plugins", { defaults = { lazy = true } })
 
+local parser_config = require "nvim-treesitter.parsers".get_parser_configs()
+parser_config.blade = {
+  install_info = {
+    url = "https://github.com/EmranMR/tree-sitter-blade",
+    files = {"src/parser.c"},
+    branch = "main",
+  },
+  filetype = "blade"
+}
+
+vim.cmd("augroup BladeFiltypeRelated\r\nau BufNewFile,BufRead *.blade.php set ft=blade\r\naugroup END")
+
 -- LIST OF TODO
 -- TODO: research and add test function to neovim
 -- TODO: Study nvim-lspconfig keymapping
