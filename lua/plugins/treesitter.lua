@@ -21,7 +21,18 @@ return {
 		-- })
 
 		configs.setup({
-			ensure_installed = { "lua", "typescript", "javascript", "html", "php", "css", "json" },
+			ensure_installed = {
+				"lua",
+				"typescript",
+				"javascript",
+				"html",
+				"php",
+				"ninja",
+				"rst",
+				"java",
+				"css",
+				"json",
+			},
 			highlight = { enable = true },
 			indent = { enable = true },
 		})

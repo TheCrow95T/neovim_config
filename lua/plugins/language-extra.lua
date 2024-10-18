@@ -11,4 +11,8 @@ return {
 		cmd = { "Sail", "Artisan", "Composer", "Npm", "Yarn", "Laravel" },
 		config = true,
 	},
+	{
+		"mfussenegger/nvim-jdtls",
+		event = "VeryLazy",
+	},
 }

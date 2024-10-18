@@ -17,6 +17,11 @@ return {
                     "jsonls",
                     -- "intelephense",
                     "phpactor",
+                    "pyright",
+                    "basedpyright",
+                    "ruff",
+                    "ruff_lsp",
+                    "jdtls",
                     "html",
                     "cssls",
                     "tailwindcss",
@@ -42,12 +47,27 @@ return {
             lspconfig.jsonls.setup({
                 capabilities = capabilities,
             })
-            lspconfig.intelephense.setup({
-                capabilities = capabilities,
-            })
-            -- lspconfig.phpactor.setup({
+            -- lspconfig.intelephense.setup({
             --     capabilities = capabilities,
             -- })
+            lspconfig.phpactor.setup({
+                capabilities = capabilities,
+            })
+            lspconfig.pyright.setup({
+                capabilities = capabilities,
+            })
+            lspconfig.basedpyright.setup({
+                capabilities = capabilities,
+            })
+            lspconfig.ruff.setup({
+                capabilities = capabilities,
+            })
+            lspconfig.ruff_lsp.setup({
+                capabilities = capabilities,
+            })
+            lspconfig.jdtls.setup({
+                capabilities = capabilities,
+            })
             lspconfig.html.setup({
                 capabilities = capabilities,
             })
