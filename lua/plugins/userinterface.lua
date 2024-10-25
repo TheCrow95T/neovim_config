@@ -10,26 +10,6 @@ return {
 		},
 	},
 	{
-		"vhyrro/luarocks.nvim",
-		event = "VeryLazy",
-		priority = 1001, -- this plugin needs to run before anything else
-		opts = {
-			rocks = { "magick" },
-		},
-	},
-	{
-		"3rd/image.nvim",
-		event = "VeryLazy",
-		dependencies = { "luarocks.nvim" },
-		config = function()
-			require("image").setup({
-				-- backend = "ueberzug",
-				window_overlap_clear_enabled = true,
-				tmux_show_only_in_active_window = true,
-			})
-		end,
-	},
-	{
 		"nvim-lualine/lualine.nvim",
 		event = { "BufReadPost", "BufWritePost", "BufNewFile" },
 		config = function()
