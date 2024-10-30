@@ -14,6 +14,7 @@ return {
                 ensure_installed = {
                     "lua_ls",
                     "ts_ls",
+                    "volar",
                     "jsonls",
                     -- "intelephense",
                     "phpactor",
@@ -83,14 +84,22 @@ return {
             lspconfig.sqlls.setup({
                 capabilities = capabilities,
             })
-            -- lspconfig.volar.setup({
-            -- 	init_options = {
-            -- 		typescript = {
-            -- 			tsdk = vim.env.HOME
-            -- 				.. "/.local/share/nvim/mason/packages/vue-language-server/node_modules/typescript/lib",
-            -- 		},
-            -- 	},
-            -- })
+            lspconfig.vtsls.setup({
+                capabilities = capabilities,
+            })
+            lspconfig.volar.setup({
+              capabilities = capabilities,
+              filetypes = { "vue" },
+            	init_options = {
+            		typescript = {
+            			tsdk = vim.env.HOME
+            				.. "/.local/share/nvim/mason/packages/vue-language-server/node_modules/typescript/lib",
+            		},
+                vue = {
+                  hybridMode = false,
+                },
+            	},
+            })
             lspconfig.emmet_ls.setup({
                 capabilities = capabilities,
                 filetypes = {
