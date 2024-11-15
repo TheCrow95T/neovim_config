@@ -21,7 +21,6 @@ return {
                     "pyright",
                     "basedpyright",
                     "ruff",
-                    "ruff_lsp",
                     "jdtls",
                     "html",
                     "cssls",
@@ -63,9 +62,6 @@ return {
             lspconfig.ruff.setup({
                 capabilities = capabilities,
             })
-            lspconfig.ruff_lsp.setup({
-                capabilities = capabilities,
-            })
             lspconfig.jdtls.setup({
                 capabilities = capabilities,
             })
@@ -82,9 +78,6 @@ return {
                 capabilities = capabilities,
             })
             lspconfig.sqlls.setup({
-                capabilities = capabilities,
-            })
-            lspconfig.vtsls.setup({
                 capabilities = capabilities,
             })
             lspconfig.volar.setup({
