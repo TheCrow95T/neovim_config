@@ -18,7 +18,6 @@ return {
                     "jsonls",
                     -- "intelephense",
                     "phpactor",
-                    "pyright",
                     "basedpyright",
                     "ruff",
                     "jdtls",
@@ -51,9 +50,6 @@ return {
             --     capabilities = capabilities,
             -- })
             lspconfig.phpactor.setup({
-                capabilities = capabilities,
-            })
-            lspconfig.pyright.setup({
                 capabilities = capabilities,
             })
             lspconfig.basedpyright.setup({
