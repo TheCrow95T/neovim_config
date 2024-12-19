@@ -25,6 +25,7 @@ return {
 				"lua",
 				"typescript",
 				"javascript",
+				"python",
 				"html",
 				"php",
 				"ninja",
