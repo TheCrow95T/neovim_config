@@ -67,6 +67,7 @@ keymap("n", "<leader>lg", "<cmd>LazyGit<CR>", { desc = "LazyGit" })
 keymap("n", "K", vim.lsp.buf.hover, { desc = "Hover" })
 keymap("n", "gd", vim.lsp.buf.definition, { desc = "Go to definition" })
 keymap("n", "<space>ca", vim.lsp.buf.code_action, { desc = "Code action" })
+keymap("n", "<space>lr", "<cmd>LspRestart<cr>", { desc = "LSP restart" })
 
 -- laravel keymapping
 keymap("n", "<leader>pa", "<cmd>Laravel artisan<cr>", { desc = "Laravel artisan" })
