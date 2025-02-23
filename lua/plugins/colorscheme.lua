@@ -42,8 +42,11 @@ return {
 	},
 	{
 		"Mofiqul/vscode.nvim",
-		event = "VeryLazy",
+		lazy = false,
 		config = function()
+      require('vscode').setup({
+        style = 'light'
+      })
 			-- vim.cmd("colorscheme vscode")
 		end,
 	},

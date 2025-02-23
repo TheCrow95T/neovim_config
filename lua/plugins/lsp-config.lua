@@ -43,6 +43,9 @@ return {
             lspconfig.ts_ls.setup({
                 capabilities = capabilities,
             })
+            -- lspconfig.vtsls.setup({
+            --     capabilities = capabilities,
+            -- })
             lspconfig.jsonls.setup({
                 capabilities = capabilities,
             })
