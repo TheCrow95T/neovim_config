@@ -41,6 +41,7 @@ return {
 
       keymap("n", "<leader><leader>", builtin.find_files, { desc = "Find file from current directory" })
       keymap("n", "<leader>/", builtin.live_grep, { desc = "Find text from current directory" })
+      keymap("n", "<leader>fs", builtin.grep_string, { desc = "Find text from current selection" })
       keymap("n", "<leader>fh", builtin.help_tags, { desc = "Find help tags" })
       keymap("n", "<leader>ft", ":TodoTelescope<CR>", { desc = "Find TODO from current directory" })
       keymap("n", "<leader>fp", ":Telescope project<CR>", { desc = "Find Project" })
