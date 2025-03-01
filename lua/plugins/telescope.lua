@@ -50,6 +50,7 @@ return {
       keymap("n", "<leader>fn", ":Telescope noice<CR>", { desc = "Find Noice message" })
       keymap("n", "<leader>fb", ":Telescope buffers<CR>", { desc = "Find buffers" })
       keymap("n", "<leader>fc", ":Telescope colorscheme<CR>", { desc = "Find buffers" })
+      keymap("n", "<leader>fr", builtin.lsp_references, { desc = "Find LSP references" })
     end,
   },
 }
