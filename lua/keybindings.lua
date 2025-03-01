@@ -86,3 +86,10 @@ keymap("n", "<leader>cd", "<cmd>Trouble diagnostics toggle<CR>", { desc = "Troub
 -- Open ToggleTerm
 keymap("n", "<C-t>", "<cmd>lua require('FTerm').toggle()<CR>", { desc = "Open ToggleTerm" })
 keymap("t", "<C-t>", "<C-\\><C-n><cmd>lua require('FTerm').toggle()<CR>", { desc = "Close ToggleTerm" })
+
+-- To prevent item that are replaced with paste doesn't goes into buffer
+-- local function map(m, k, v)
+--     vim.keymap.set(m, k, v, { silent = true })
+-- end
+--
+-- map("x", "p", "P")
