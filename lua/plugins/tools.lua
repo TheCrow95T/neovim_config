@@ -71,7 +71,7 @@ return {
         "n",
         "<Space>mm",
         "<cmd>lua require('harpoon.ui').toggle_quick_menu()<CR>",
-        { desc = "Harpoon add file" }
+        { desc = "Harpoon toggle quick menu" }
       )
     end,
   },
