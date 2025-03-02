@@ -44,12 +44,8 @@ keymap("n", "<leader>-", "<cmd>split<cr>", { desc = "Horizontal split" })
 -- Toggle focus windows
 keymap("n", "<M-z>", "<cmd>lua require('maximizer').toggle()<cr>", { desc = "Toggle Focus window" })
 
--- tmux keymapping
-keymap("n", "<C-\\>", "<cmd>TmuxNavigatePrevious<cr>", { desc = "Go to the previous pane" })
-keymap("n", "<C-h>", "<cmd>TmuxNavigateLeft<cr>", { desc = "Got to the left pane" })
-keymap("n", "<C-j>", "<cmd>TmuxNavigateDown<cr>", { desc = "Got to the down pane" })
-keymap("n", "<C-k>", "<cmd>TmuxNavigateUp<cr>", { desc = "Got to the up pane" })
-keymap("n", "<C-l>", "<cmd>TmuxNavigateRight<cr>", { desc = "Got to the right pane" })
+-- Tmux keybindings
+-- Please go to plugins directory
 
 -- Telescope keybindings
 -- Please go to plugins directory
