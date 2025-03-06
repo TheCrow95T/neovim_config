@@ -10,6 +10,16 @@ return {
 		},
 	},
 	{
+		"folke/snacks.nvim",
+		priority = 1000,
+		lazy = false,
+		opts = {
+			image = {
+        enabled = true
+			},
+		},
+	},
+	{
 		"nvim-lualine/lualine.nvim",
 		event = { "BufReadPost", "BufWritePost", "BufNewFile" },
 		config = function()
@@ -65,6 +75,17 @@ return {
 			require("gitsigns").setup()
 		end,
 	},
+  {
+    "hedyhli/outline.nvim",
+    event = "VeryLazy",
+    cmd = { "Outline", "OutlineOpen" },
+    keys = {
+      { "<leader>o", "<cmd>Outline<CR>", desc = "Toggle outline" },
+    },
+    config = function()
+      require("outline").setup({})
+    end,
+  },
 	{
 		"folke/noice.nvim",
 		event = "VeryLazy",

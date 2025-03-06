@@ -58,17 +58,13 @@ keymap("n", "<leader>ll", "<cmd>Lazy<CR>", { desc = "Lazy package manager" })
 
 -- Lazygit keybindings
 keymap("n", "<leader>lg", "<cmd>LazyGit<CR>", { desc = "LazyGit" })
+keymap("n", "<leader>K", "<cmd>Gitsigns blame_line<CR>", { desc = "gitsign blame line" })
 
 -- nvim-lspconfig keymapping
 keymap("n", "K", vim.lsp.buf.hover, { desc = "Hover" })
 keymap("n", "gd", vim.lsp.buf.definition, { desc = "Go to definition" })
 keymap("n", "<space>ca", vim.lsp.buf.code_action, { desc = "Code action" })
 keymap("n", "<space>lr", "<cmd>LspRestart<cr>", { desc = "LSP restart" })
-
--- laravel keymapping
-keymap("n", "<leader>pa", "<cmd>Laravel artisan<cr>", { desc = "Laravel artisan" })
-keymap("n", "<leader>pr", "<cmd>Laravel routes<cr>", { desc = "Laravel routes" })
-keymap("n", "<leader>pm", "<cmd>Laravel related<cr>", { desc = "Laravel related" })
 
 -- none-ls code formatter
 keymap("n", "<leader>cf", vim.lsp.buf.format, { desc = "Code Formatter" })

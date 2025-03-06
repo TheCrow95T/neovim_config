@@ -105,7 +105,7 @@ return {
         char = {
           enabled = false,
         },
-      }
+      },
     },
     keys = {
       {
