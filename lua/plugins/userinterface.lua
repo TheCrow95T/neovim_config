@@ -15,7 +15,7 @@ return {
 		lazy = false,
 		opts = {
 			image = {
-        enabled = true
+				enabled = true,
 			},
 		},
 	},
@@ -75,17 +75,17 @@ return {
 			require("gitsigns").setup()
 		end,
 	},
-  {
-    "hedyhli/outline.nvim",
-    event = "VeryLazy",
-    cmd = { "Outline", "OutlineOpen" },
-    keys = {
-      { "<leader>o", "<cmd>Outline<CR>", desc = "Toggle outline" },
-    },
-    config = function()
-      require("outline").setup({})
-    end,
-  },
+	{
+		"hedyhli/outline.nvim",
+		event = "VeryLazy",
+		cmd = { "Outline", "OutlineOpen" },
+		keys = {
+			{ "<leader>o", "<cmd>Outline<CR>", desc = "Toggle outline" },
+		},
+		config = function()
+			require("outline").setup({})
+		end,
+	},
 	{
 		"folke/noice.nvim",
 		event = "VeryLazy",

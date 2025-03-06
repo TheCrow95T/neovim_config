@@ -70,7 +70,7 @@ keymap("n", "<space>lr", "<cmd>LspRestart<cr>", { desc = "LSP restart" })
 keymap("n", "<leader>cf", vim.lsp.buf.format, { desc = "Code Formatter" })
 
 -- Noice dismiss message
-keymap("n", "<leader>nn", "<cmd>NoiceDismiss<CR>", { desc = "Dismiss noice notification" })
+keymap("n", "<leader>dn", "<cmd>NoiceDismiss<CR>", { desc = "Dismiss noice notification" })
 
 -- Trouble keymapping
 keymap("n", "<leader>cd", "<cmd>Trouble diagnostics toggle<CR>", { desc = "Trouble diagnostics" })
