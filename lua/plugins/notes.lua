@@ -9,6 +9,8 @@ return {
 			{ "<leader>ns", "<cmd>ZkNew { group = 'standup', dir = 'StandUp' }<cr>", desc = "Create new Stand up" },
       { "<leader>nf", "<cmd>ZkNotes<cr>", desc = "Search notes" },
 			{ "<leader>nt", "<cmd>ZkTags<cr>", desc = "Search notes by tag" },
+			{ "<leader>ng", "<cmd>ZkLinks<cr>", desc = "Search notes by links" },
+			{ "<leader>nG", "<cmd>ZkBacklinks<cr>", desc = "Search notes by back links" },
 		},
 		config = function()
 			require("zk").setup({
