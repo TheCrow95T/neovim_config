@@ -148,6 +148,17 @@ return {
     event = "VeryLazy",
   },
   {
+    "stevearc/quicker.nvim",
+    event = "VeryLazy",
+    ---@module "quicker"
+    ---@type quicker.SetupOptions
+    opts = {},
+  },
+  {
+    "romainl/vim-qf",
+    event = "VeryLazy",
+  },
+  {
     "karb94/neoscroll.nvim",
     event = "VeryLazy",
     opts = {},

@@ -58,22 +58,16 @@ return {
 		end,
 	},
 	{
-		"ThePrimeagen/harpoon",
+		"otavioschwanck/arrow.nvim",
 		event = "VeryLazy",
-		config = function()
-			vim.keymap.set(
-				"n",
-				"<Space>ma",
-				"<cmd>lua require('harpoon.mark').add_file()<CR>",
-				{ desc = "Harpoon add file" }
-			)
-			vim.keymap.set(
-				"n",
-				"<Space>mm",
-				"<cmd>lua require('harpoon.ui').toggle_quick_menu()<CR>",
-				{ desc = "Harpoon toggle quick menu" }
-			)
-		end,
+		dependencies = {
+			{ "nvim-tree/nvim-web-devicons" },
+		},
+		opts = {
+			show_icons = true,
+			leader_key = ";", -- Recommended to be a single key
+			buffer_leader_key = "m", -- Per Buffer Mappings
+		},
 	},
 	{
 		"kevinhwang91/nvim-ufo",

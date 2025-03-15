@@ -34,7 +34,6 @@ return {
 
       require("telescope").load_extension("ui-select")
       require("telescope").load_extension("project")
-      require("telescope").load_extension("harpoon")
 
       -- keybindings
       local keymap = vim.keymap.set
@@ -47,7 +46,6 @@ return {
       keymap("n", "<leader>ft", ":TodoTelescope<CR>", { desc = "Find TODO from current directory" })
       keymap("n", "<leader>fp", ":Telescope project<CR>", { desc = "Find Project" })
       keymap("n", "<leader>fk", ":Telescope keymaps<CR>", { desc = "Find Keymapping" })
-      keymap("n", "<leader>fm", ":Telescope harpoon marks<CR>", { desc = "Find Mark" })
       keymap("n", "<leader>fn", ":Telescope noice<CR>", { desc = "Find Noice message" })
       keymap("n", "<leader>fb", ":Telescope buffers<CR>", { desc = "Find buffers" })
       keymap("n", "<leader>fc", ":Telescope colorscheme<CR>", { desc = "Find buffers" })
