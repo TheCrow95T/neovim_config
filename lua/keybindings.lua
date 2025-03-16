@@ -79,6 +79,10 @@ keymap("n", "<leader>cd", "<cmd>Trouble diagnostics toggle<CR>", { desc = "Troub
 keymap("n", "<C-t>", "<cmd>lua require('FTerm').toggle()<CR>", { desc = "Open ToggleTerm" })
 keymap("t", "<C-t>", "<C-\\><C-n><cmd>lua require('FTerm').toggle()<CR>", { desc = "Close ToggleTerm" })
 
+-- Quickfix persist keymap
+keymap("n", "<leader>qs", ":lua require('persist-quickfix').save('list-name')", { desc = "Save quickfix list" })
+keymap("n", "<leader>qc", ":lua require('persist-quickfix').choose()", { desc = "Choose quickfix list" })
+
 -- To prevent item that are replaced with paste doesn't goes into buffer
 -- local function map(m, k, v)
 --     vim.keymap.set(m, k, v, { silent = true })

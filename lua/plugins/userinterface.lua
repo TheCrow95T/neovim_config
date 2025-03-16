@@ -155,8 +155,9 @@ return {
     opts = {},
   },
   {
-    "romainl/vim-qf",
-    event = "VeryLazy",
+    'brunobmello25/persist-quickfix.nvim',
+    --- @type PersistQuickfix.Config
+    opts = {},
   },
   {
     "karb94/neoscroll.nvim",
