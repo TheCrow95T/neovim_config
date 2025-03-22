@@ -17,6 +17,13 @@ return {
       image = {
         enabled = true,
       },
+      terminal = {
+        win = {
+          style = "float",
+          width = math.floor(vim.o.columns * 0.8),
+          height = math.floor(vim.o.lines * 0.8),
+        },
+      },
     },
   },
   {
@@ -33,15 +40,15 @@ return {
           lualine_c = {
             {
               "filename",
-              file_status = true, -- Displays file status (readonly status, modified status)
-              newfile_status = false, -- Display new file status (new file means no write after created)
-              path = 1,        -- 0: Just the filename
-              shorting_target = 40, -- Shortens path to leave 40 spaces in the window
+              file_status = true,      -- Displays file status (readonly status, modified status)
+              newfile_status = false,  -- Display new file status (new file means no write after created)
+              path = 1,                -- 0: Just the filename
+              shorting_target = 40,    -- Shortens path to leave 40 spaces in the window
               symbols = {
-                modified = "[+]", -- Text to show when the file is modified.
-                readonly = "[-]", -- Text to show when the file is non-modifiable or readonly.
+                modified = "[+]",      -- Text to show when the file is modified.
+                readonly = "[-]",      -- Text to show when the file is non-modifiable or readonly.
                 unnamed = "[No Name]", -- Text to show for unnamed buffers.
-                newfile = "[New]", -- Text to show for newly created file before first write
+                newfile = "[New]",     -- Text to show for newly created file before first write
               },
             },
           },
@@ -126,19 +133,6 @@ return {
       require("noice").setup({
         cmdline = {
           view = "cmdline",
-        },
-      })
-    end,
-  },
-  {
-    "numToStr/FTerm.nvim",
-    event = "VeryLazy",
-    config = function()
-      require("FTerm").setup({
-        border = "double",
-        dimensions = {
-          height = 0.9,
-          width = 0.9,
         },
       })
     end,

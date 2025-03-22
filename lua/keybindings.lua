@@ -76,8 +76,8 @@ keymap("n", "<leader>dn", "<cmd>NoiceDismiss<CR>", { desc = "Dismiss noice notif
 keymap("n", "<leader>cd", "<cmd>Trouble diagnostics toggle<CR>", { desc = "Trouble diagnostics" })
 
 -- Open ToggleTerm
-keymap("n", "<C-t>", "<cmd>lua require('FTerm').toggle()<CR>", { desc = "Open ToggleTerm" })
-keymap("t", "<C-t>", "<C-\\><C-n><cmd>lua require('FTerm').toggle()<CR>", { desc = "Close ToggleTerm" })
+keymap("n", "<C-t>", "<cmd>lua Snacks.terminal.toggle()<CR>", { desc = "Open Snacks Term" })
+keymap("t", "<C-t>", "<C-\\><C-n><cmd>lua Snacks.terminal.toggle()<CR>", { desc = "Close Snacks Term" })
 
 -- Quickfix persist keymap
 keymap("n", "<leader>qs", ":lua require('persist-quickfix').save('list-name')", { desc = "Save quickfix list" })
