@@ -149,6 +149,7 @@ return {
   },
   {
     'brunobmello25/persist-quickfix.nvim',
+    event = "VeryLazy",
     --- @type PersistQuickfix.Config
     opts = {},
   },
