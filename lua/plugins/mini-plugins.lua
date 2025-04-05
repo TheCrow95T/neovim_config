@@ -80,7 +80,8 @@ return {
                     "notify",
                     "toggleterm",
                     "lazyterm",
-                    "snacks_terminal"
+                    "snacks_terminal",
+                    "ranger-nvim"
                 },
                 callback = function()
                     vim.b.miniindentscope_disable = true
