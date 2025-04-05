@@ -1,7 +1,7 @@
 return {
 	{
 		"EdenEast/nightfox.nvim",
-		lazy = false,
+    event = "VeryLazy",
 		priority = 1000,
 		config = function(PluginSpec, opts)
 			require("nightfox").setup({
@@ -42,7 +42,7 @@ return {
 	},
 	{
 		"Mofiqul/vscode.nvim",
-		lazy = false,
+    event = "VeryLazy",
 		config = function()
       require('vscode').setup({
         style = 'light'
