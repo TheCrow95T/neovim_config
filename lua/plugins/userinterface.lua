@@ -97,6 +97,9 @@ return {
     event = "VeryLazy",
     opts = {
       -- add any options here
+      cmdline = {
+        view = "cmdline",
+      },
       lsp = {
         override = {
           ["vim.lsp.util.convert_input_to_markdown_lines"] = true,
@@ -126,15 +129,7 @@ return {
     },
     dependencies = {
       "MunifTanjim/nui.nvim",
-      "rcarriga/nvim-notify",
     },
-    config = function()
-      require("noice").setup({
-        cmdline = {
-          view = "cmdline",
-        },
-      })
-    end,
   },
   {
     "kevinhwang91/nvim-bqf",
