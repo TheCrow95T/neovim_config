@@ -2,7 +2,7 @@ return {
   {
     "nvim-telescope/telescope.nvim",
     event = "VeryLazy",
-    tag = "0.1.6",
+    version = false,
     dependencies = {
       "nvim-lua/plenary.nvim",
       "nvim-lua/popup.nvim",
