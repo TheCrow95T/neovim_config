@@ -20,3 +20,4 @@ vim.o.foldlevelstart = 99
 -- vim.o.foldenable = true
 
 vim.g.mapleader = " "
+vim.diagnostic.config({ virtual_text = true })
