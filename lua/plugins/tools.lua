@@ -12,6 +12,12 @@ return {
 		enabled = vim.fn.has("nvim-0.10.0") == 1,
 	},
 	{
+		"folke/trouble.nvim",
+		event = "VeryLazy",
+		dependencies = { "nvim-tree/nvim-web-devicons" },
+		opts = {},
+	},
+	{
 		"windwp/nvim-ts-autotag",
 		event = "VeryLazy",
 		config = function()
@@ -68,27 +74,6 @@ return {
 			leader_key = ";", -- Recommended to be a single key
 			buffer_leader_key = "m", -- Per Buffer Mappings
 		},
-	},
-	{
-		"kevinhwang91/nvim-ufo",
-		event = "VeryLazy",
-		dependencies = "kevinhwang91/promise-async",
-		config = function()
-			vim.keymap.set("n", "zR", require("ufo").openAllFolds, { desc = "Open all folds" })
-			vim.keymap.set("n", "zM", require("ufo").closeAllFolds, { desc = "Close all folds" })
-			vim.keymap.set("n", "zK", function()
-				local winid = require("ufo").peekFoldedLinesUnderCursor()
-				if not winid then
-					vim.lsp.buf.hover()
-				end
-			end, { desc = "Peek Fold" })
-
-			require("ufo").setup({
-				provider_selector = function(bufnr, filetype, buftype)
-					return { "lsp", "indent" }
-				end,
-			})
-		end,
 	},
 	{
 		"folke/flash.nvim",

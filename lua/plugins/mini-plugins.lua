@@ -58,43 +58,4 @@ return {
             vim.cmd("hi MiniCursorword gui=underline")
         end,
     },
-    {
-        "echasnovski/mini.indentscope",
-        event = "VeryLazy",
-        version = "*", -- wait till new 0.7.0 release to put it back on semver
-        opts = {
-            symbol = "│",
-            options = { try_as_border = true },
-        },
-        init = function()
-            vim.api.nvim_create_autocmd("FileType", {
-                pattern = {
-                    "help",
-                    "alpha",
-                    "dashboard",
-                    "neo-tree",
-                    "Trouble",
-                    "trouble",
-                    "lazy",
-                    "mason",
-                    "notify",
-                    "toggleterm",
-                    "lazyterm",
-                    "snacks_terminal",
-                    "ranger-nvim"
-                },
-                callback = function()
-                    vim.b.miniindentscope_disable = true
-                end,
-            })
-        end,
-    },
-    {
-        "echasnovski/mini.splitjoin",
-        event = "VeryLazy",
-        version = "*",
-        config = function()
-            require("mini.splitjoin").setup()
-        end,
-    },
 }

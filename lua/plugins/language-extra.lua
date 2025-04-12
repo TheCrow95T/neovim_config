@@ -1,7 +1,9 @@
 return {
 	{
-		"mfussenegger/nvim-jdtls",
+		"pmizio/typescript-tools.nvim",
 		event = "VeryLazy",
+		dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
+		opts = {},
 	},
 	{
 		"seblyng/roslyn.nvim",
@@ -19,13 +21,13 @@ return {
 		dependencies = { "nvim-lua/plenary.nvim", "nvim-telescope/telescope.nvim" },
 		config = function()
 			require("easy-dotnet").setup({
-        picker = "snacks"
-      })
+				picker = "snacks",
+			})
 
-      -- keybindings
-      local keymap = vim.keymap.set
+			-- keybindings
+			local keymap = vim.keymap.set
 
-      keymap("n", "<leader>dc", "<cmd>Dotnet<CR>", { desc = "Dotnet command" })
+			keymap("n", "<leader>dc", "<cmd>Dotnet<CR>", { desc = "Dotnet command" })
 		end,
 	},
 }

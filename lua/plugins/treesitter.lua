@@ -16,7 +16,6 @@ return {
 				"php",
 				"ninja",
 				"rst",
-				"java",
 				"css",
 				"json",
         "markdown",

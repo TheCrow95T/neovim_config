@@ -14,13 +14,10 @@ return {
                 ensure_installed = {
                     "lua_ls",
                     "ts_ls",
-                    "volar",
                     "jsonls",
-                    -- "intelephense",
                     "phpactor",
                     "basedpyright",
                     "ruff",
-                    "jdtls",
                     "html",
                     "cssls",
                     "tailwindcss",
@@ -40,18 +37,12 @@ return {
             lspconfig.lua_ls.setup({
                 capabilities = capabilities,
             })
-            lspconfig.ts_ls.setup({
-                capabilities = capabilities,
-            })
-            -- lspconfig.vtsls.setup({
+            -- lspconfig.ts_ls.setup({
             --     capabilities = capabilities,
             -- })
             lspconfig.jsonls.setup({
                 capabilities = capabilities,
             })
-            -- lspconfig.intelephense.setup({
-            --     capabilities = capabilities,
-            -- })
             lspconfig.phpactor.setup({
                 capabilities = capabilities,
             })
@@ -59,9 +50,6 @@ return {
                 capabilities = capabilities,
             })
             lspconfig.ruff.setup({
-                capabilities = capabilities,
-            })
-            lspconfig.jdtls.setup({
                 capabilities = capabilities,
             })
             lspconfig.html.setup({
@@ -78,19 +66,6 @@ return {
             })
             lspconfig.sqlls.setup({
                 capabilities = capabilities,
-            })
-            lspconfig.volar.setup({
-              capabilities = capabilities,
-              filetypes = { "vue" },
-            	init_options = {
-            		typescript = {
-            			tsdk = vim.env.HOME
-            				.. "/.local/share/nvim/mason/packages/vue-language-server/node_modules/typescript/lib",
-            		},
-                vue = {
-                  hybridMode = false,
-                },
-            	},
             })
             lspconfig.emmet_ls.setup({
                 capabilities = capabilities,

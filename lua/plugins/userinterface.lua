@@ -1,18 +1,10 @@
 return {
   {
-    "nvim-neo-tree/neo-tree.nvim",
-    event = "VeryLazy",
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-      "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
-      "MunifTanjim/nui.nvim",
-      -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
-    },
-  },
-  {
     "folke/snacks.nvim",
     event = "VeryLazy",
     opts = {
+      indent = {},
+      explorer = {},
       image = {
         enabled = true,
       },
@@ -31,8 +23,6 @@ return {
     config = function()
       require("lualine").setup({
         options = {
-          -- theme = "material",
-          -- theme = "powerline",
           theme = "auto",
         },
         sections = {
@@ -69,10 +59,6 @@ return {
         },
       })
     end,
-  },
-  {
-    "ojroques/nvim-bufdel",
-    event = "VeryLazy",
   },
   {
     "lewis6991/gitsigns.nvim",
