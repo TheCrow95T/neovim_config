@@ -75,13 +75,13 @@ return {
       { "<leader>s", "<cmd>Switch<cr>", desc = "Power of switch magic on code" },
     },
   },
-  {
-    "HakonHarnes/img-clip.nvim",
-    event = "VeryLazy",
-    opts = {},
-    keys = {
-      -- suggested keymap
-      { "<leader>np", "<cmd>PasteImage<cr>", desc = "Paste image from system clipboard" },
-    },
-  },
+  -- {
+  --   "HakonHarnes/img-clip.nvim",
+  --   event = "VeryLazy",
+  --   opts = {},
+  --   keys = {
+  --     -- suggested keymap
+  --     { "<leader>np", "<cmd>PasteImage<cr>", desc = "Paste image from system clipboard" },
+  --   },
+  -- },
 }
