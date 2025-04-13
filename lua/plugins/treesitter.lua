@@ -8,6 +8,8 @@ return {
 		configs.setup({
 			ensure_installed = {
 				"lua",
+        "bash",
+        "regex",
 				"typescript",
 				"javascript",
 				"tsx",
