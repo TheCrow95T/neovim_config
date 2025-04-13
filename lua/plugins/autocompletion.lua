@@ -15,6 +15,8 @@ return {
       require("luasnip").filetype_extend("javascript", { "javascriptreact" })
       require("luasnip").filetype_extend("javascript", { "html" })
 
+      cmp.register_source("easy-dotnet", require("easy-dotnet").package_completion_source)
+
       cmp.setup({
         snippet = {
           -- REQUIRED - you must specify a snippet engine
