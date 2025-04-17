@@ -42,7 +42,7 @@ return {
 				nerd_font_variant = "mono",
 			},
 			completion = {
-				documentation = { auto_show = false },
+				documentation = { auto_show = true, auto_show_delay_ms = 200 },
 				trigger = {
 					show_on_x_blocked_trigger_characters = { "'", '"', "(", "{" },
 				},
