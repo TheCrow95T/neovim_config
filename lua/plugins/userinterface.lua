@@ -1,8 +1,8 @@
 return {
   {
     "folke/snacks.nvim",
-    lazy=false,
-    priority=1000,
+    lazy = false,
+    priority = 1000,
     opts = {
       indent = {},
       explorer = {},
@@ -30,15 +30,15 @@ return {
           lualine_c = {
             {
               "filename",
-              file_status = true,      -- Displays file status (readonly status, modified status)
-              newfile_status = false,  -- Display new file status (new file means no write after created)
-              path = 1,                -- 0: Just the filename
-              shorting_target = 40,    -- Shortens path to leave 40 spaces in the window
+              file_status = true, -- Displays file status (readonly status, modified status)
+              newfile_status = false, -- Display new file status (new file means no write after created)
+              path = 1,        -- 0: Just the filename
+              shorting_target = 40, -- Shortens path to leave 40 spaces in the window
               symbols = {
-                modified = "[+]",      -- Text to show when the file is modified.
-                readonly = "[-]",      -- Text to show when the file is non-modifiable or readonly.
+                modified = "[+]", -- Text to show when the file is modified.
+                readonly = "[-]", -- Text to show when the file is non-modifiable or readonly.
                 unnamed = "[No Name]", -- Text to show for unnamed buffers.
-                newfile = "[New]",     -- Text to show for newly created file before first write
+                newfile = "[New]", -- Text to show for newly created file before first write
               },
             },
           },
@@ -93,6 +93,18 @@ return {
           ["vim.lsp.util.stylize_markdown"] = true,
           ["cmp.entry.get_documentation"] = true,
         },
+        signature = {
+          enabled = false,
+          auto_open = {
+            enabled = false,
+            trigger = true, -- Automatically show signature help when typing a trigger character from the LSP
+            luasnip = true, -- Will open signature help when jumping to Luasnip insert nodes
+            throttle = 50, -- Debounce lsp signature help request by 50ms
+          },
+          view = nil, -- when nil, use defaults from documentation
+          ---@type NoiceViewOptions
+          opts = {},  -- merged with defaults from documentation
+        },
       },
       routes = {
         {
@@ -140,7 +152,7 @@ return {
     opts = {},
   },
   {
-    'brunobmello25/persist-quickfix.nvim',
+    "brunobmello25/persist-quickfix.nvim",
     event = "VeryLazy",
     --- @type PersistQuickfix.Config
     opts = {},
