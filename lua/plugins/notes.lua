@@ -77,13 +77,4 @@ return {
       { "<leader>s", "<cmd>Switch<cr>", desc = "Power of switch magic on code" },
     },
   },
-  -- {
-  --   "HakonHarnes/img-clip.nvim",
-  --   event = "VeryLazy",
-  --   opts = {},
-  --   keys = {
-  --     -- suggested keymap
-  --     { "<leader>np", "<cmd>lua require('img-clip').paste_image()<cr>", desc = "Paste image from system clipboard" },
-  --   },
-  -- },
 }

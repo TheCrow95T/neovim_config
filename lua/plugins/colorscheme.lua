@@ -1,8 +1,15 @@
 return {
 	{
+		"folke/tokyonight.nvim",
+		lazy = false, -- make sure we load this during startup if it is your main colorscheme
+		priority = 1000, -- make sure to load this before all the other start plugins
+		config = function()
+			vim.cmd("colorscheme tokyonight-night")
+		end,
+	},
+	{
 		"EdenEast/nightfox.nvim",
 		event = "VeryLazy",
-		priority = 1000,
 		config = function(PluginSpec, opts)
 			require("nightfox").setup({
 				options = {
@@ -25,13 +32,21 @@ return {
 					},
 				},
 			})
-			-- vim.cmd("colorscheme carbonfox")
+			-- vim.cmd("colorscheme duskfox")
+		end,
+	},
+	{
+		"projekt0n/github-nvim-theme",
+		event = "VeryLazy",
+		name = "github-theme",
+		config = function()
+			require("github-theme").setup({})
+			-- vim.cmd("colorscheme github_dark_dimmed")
 		end,
 	},
 	{
 		"sainnhe/sonokai",
-		lazy = false,
-		priority = 1000,
+		event = "VeryLazy",
 		config = function()
 			vim.g.sonokai_style = "shusia"
 			-- vim.g.sonokai_transparent_background = 1
@@ -41,14 +56,26 @@ return {
 		end,
 	},
 	{
-		"projekt0n/github-nvim-theme",
-		name = "github-theme",
-		lazy = false, -- make sure we load this during startup if it is your main colorscheme
-		priority = 1000, -- make sure to load this before all the other start plugins
+		"xiantang/darcula-dark.nvim",
+		dependencies = {
+			"nvim-treesitter/nvim-treesitter",
+		},
+	},
+	{
+		"navarasu/onedark.nvim",
+		event = "VeryLazy",
 		config = function()
-			require("github-theme").setup({
+			require("onedark").setup({
+				style = "dark",
 			})
-			vim.cmd("colorscheme github_dark_dimmed")
+			-- require("onedark").load()
+		end,
+	},
+	{
+		"nickkadutskyi/jb.nvim",
+		event = "VeryLazy",
+		config = function()
+			-- vim.cmd("colorscheme jb")
 		end,
 	},
 	{
@@ -56,7 +83,7 @@ return {
 		event = "VeryLazy",
 		config = function()
 			require("vscode").setup({
-				style = "light",
+				style = "dark",
 			})
 			-- vim.cmd("colorscheme vscode")
 		end,
