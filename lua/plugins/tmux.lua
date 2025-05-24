@@ -1,6 +1,7 @@
 return {
 	"christoomey/vim-tmux-navigator",
-	event = "VeryLazy",
+  lazy = false,
+  priority = 1000,
 	keys = {
 		{ "<C-\\>", "<cmd>TmuxNavigatePrevious<cr>", desc = "Go to the previous pane" },
 		{ "<C-h>", "<cmd>TmuxNavigateLeft<cr>", desc = "Got to the left pane" },

@@ -13,7 +13,6 @@ return {
 			require("mason-lspconfig").setup({
 				ensure_installed = {
 					"lua_ls",
-          "vtsls",
 					"jsonls",
 					"phpactor",
 					"basedpyright",
@@ -22,7 +21,6 @@ return {
 					"cssls",
 					"tailwindcss",
 					"eslint",
-					"emmet_ls",
 				},
 			})
 		end,
@@ -35,9 +33,6 @@ return {
 
 			local lspconfig = require("lspconfig")
 			lspconfig.lua_ls.setup({
-				capabilities = capabilities,
-			})
-			lspconfig.vtsls.setup({
 				capabilities = capabilities,
 			})
 			lspconfig.jsonls.setup({
@@ -67,30 +62,31 @@ return {
 			lspconfig.sqlls.setup({
 				capabilities = capabilities,
 			})
-			lspconfig.emmet_ls.setup({
-				capabilities = capabilities,
-				filetypes = {
-					"html",
-					"typescriptreact",
-					"javascriptreact",
-					"css",
-					"sass",
-					"scss",
-					"less",
-					"javascript",
-					"typescript",
-					"vue",
-					"blade",
-				},
-				init_options = {
-					html = {
-						options = {
-							-- For possible options, see: https://github.com/emmetio/emmet/blob/master/src/config.ts#L79-L267
-							["bem.enabled"] = true,
-						},
-					},
-				},
-			})
+      lspconfig.emmet_language_server.setup({
+        filetypes = { "css", "html", "javascriptreact", "typescriptreact" },
+        -- Read more about this options in the [vscode docs](https://code.visualstudio.com/docs/editor/emmet#_emmet-configuration).
+        -- **Note:** only the options listed in the table are supported.
+        init_options = {
+          ---@type table<string, string>
+          includeLanguages = {},
+          --- @type string[]
+          excludeLanguages = {},
+          --- @type string[]
+          extensionsPath = {},
+          --- @type table<string, any> [Emmet Docs](https://docs.emmet.io/customization/preferences/)
+          preferences = {},
+          --- @type boolean Defaults to `true`
+          showAbbreviationSuggestions = true,
+          --- @type "always" | "never" Defaults to `"always"`
+          showExpandedAbbreviation = "always",
+          --- @type boolean Defaults to `false`
+          showSuggestionsAsSnippets = false,
+          --- @type table<string, any> [Emmet Docs](https://docs.emmet.io/customization/syntax-profiles/)
+          syntaxProfiles = {},
+          --- @type table<string, string> [Emmet Docs](https://docs.emmet.io/customization/snippets/#variables)
+          variables = {},
+        },
+      })
 		end,
 	},
 }

@@ -1,10 +1,9 @@
 return {
 	{
 		"folke/tokyonight.nvim",
-		lazy = false, -- make sure we load this during startup if it is your main colorscheme
-		priority = 1000, -- make sure to load this before all the other start plugins
+		event = "VeryLazy",
 		config = function()
-			vim.cmd("colorscheme tokyonight-night")
+			-- vim.cmd("colorscheme tokyonight-night")
 		end,
 	},
 	{
@@ -56,27 +55,31 @@ return {
 		end,
 	},
 	{
-		"xiantang/darcula-dark.nvim",
-		dependencies = {
-			"nvim-treesitter/nvim-treesitter",
-		},
-	},
-	{
 		"navarasu/onedark.nvim",
 		event = "VeryLazy",
 		config = function()
 			require("onedark").setup({
 				style = "dark",
 			})
-			-- require("onedark").load()
+		end,
+	},
+	{
+		"yorik1984/newpaper.nvim",
+		lazy = false, -- make sure we load this during startup if it is your main colorscheme
+		priority = 1000, -- make sure to load this before all the other start plugins
+		config = function()
+			require("newpaper").setup({
+				style = "dark",
+				colors = {
+					bg = "#292929",
+				},
+			})
+			vim.cmd("colorscheme newpaper")
 		end,
 	},
 	{
 		"nickkadutskyi/jb.nvim",
 		event = "VeryLazy",
-		config = function()
-			-- vim.cmd("colorscheme jb")
-		end,
 	},
 	{
 		"Mofiqul/vscode.nvim",
@@ -85,7 +88,23 @@ return {
 			require("vscode").setup({
 				style = "dark",
 			})
-			-- vim.cmd("colorscheme vscode")
 		end,
+	},
+	{
+		"catppuccin/nvim",
+		event = "VeryLazy",
+		name = "catppuccin",
+	},
+	{
+		"morhetz/gruvbox",
+		event = "VeryLazy",
+	},
+  {
+    "cpea2506/one_monokai.nvim",
+		event = "VeryLazy",
+  },
+	{
+		"xiantang/darcula-dark.nvim",
+		event = "VeryLazy",
 	},
 }

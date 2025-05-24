@@ -1,7 +1,7 @@
 return {
 	{ -- Autocompletion
 		"saghen/blink.cmp",
-		event = "VimEnter",
+		event = "VeryLazy",
 		version = "1.*",
 		dependencies = {
 			-- Snippet Engine
