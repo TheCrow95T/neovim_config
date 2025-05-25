@@ -43,18 +43,11 @@ return {
 		},
 	},
 	{
-		"kelly-lin/ranger.nvim",
+		"mikavilpas/yazi.nvim",
 		event = "VeryLazy",
-		config = function()
-			require("ranger-nvim").setup({
-				replace_netrw = true,
-				ui = {
-					height = 0.9,
-					width = 0.9,
-					border = "single",
-				},
-			})
-		end,
+		dependencies = {
+			"folke/snacks.nvim",
+		},
 	},
 	{
 		"0x00-ketsu/maximizer.nvim",

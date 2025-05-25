@@ -9,12 +9,7 @@ keymap("n", "<leader>rs", ":lua require('persistence').load()<CR>", { desc = "Re
 
 -- File Browser keybinding
 keymap("n", "<leader>e", "<cmd>lua Snacks.explorer()<CR>", { desc = "Toggle Snacks Explorer" })
-vim.api.nvim_set_keymap("n", "<C-e>", "", {
-    noremap = true,
-    callback = function()
-        require("ranger-nvim").open(true)
-    end,
-})
+keymap("n", "<C-e>", "<cmd>Yazi toggle<CR>", { desc = "Toggle Yazi Explorer" })
 
 -- Bufferline keybindings
 keymap("n", "<S-h>", "<cmd>BufferLineCyclePrev<CR>", { desc = "Go to previous buffer" })

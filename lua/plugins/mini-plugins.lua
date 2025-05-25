@@ -1,5 +1,13 @@
 return {
     {
+        "echasnovski/mini.ai",
+        event = "VeryLazy",
+        version = "*",
+        config = function()
+            require("mini.ai").setup()
+        end,
+    },
+    {
         "echasnovski/mini.pairs",
         event = "VeryLazy",
         version = "*",
