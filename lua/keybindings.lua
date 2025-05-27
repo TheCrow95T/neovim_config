@@ -9,7 +9,7 @@ keymap("n", "<leader>rs", ":lua require('persistence').load()<CR>", { desc = "Re
 
 -- File Browser keybinding
 keymap("n", "<leader>e", "<cmd>lua Snacks.explorer()<CR>", { desc = "Toggle Snacks Explorer" })
-keymap("n", "<C-e>", "<cmd>Yazi toggle<CR>", { desc = "Toggle Yazi Explorer" })
+keymap("n", "<C-e>", "<cmd>Yazi<CR>", { desc = "Open Yazi Explorer" })
 
 -- Bufferline keybindings
 keymap("n", "<S-h>", "<cmd>BufferLineCyclePrev<CR>", { desc = "Go to previous buffer" })
@@ -29,6 +29,10 @@ keymap("n", "<C-Right>", "<cmd>vertical resize +2<cr>", { desc = "Increase Windo
 -- Split windows
 keymap("n", "<leader>\\", "<cmd>vs<cr>", { desc = "Vertical split" })
 keymap("n", "<leader>-", "<cmd>split<cr>", { desc = "Horizontal split" })
+
+-- New tab
+keymap("n", "<C-n>", "<cmd>tab split<cr>", { desc = "New tab" })
+keymap("n", "<leader>-", "<cmd>tabnext<cr>", { desc = "Cycle through tab" })
 
 -- Toggle focus windows
 keymap("n", "<M-z>", "<cmd>lua require('maximizer').toggle()<cr>", { desc = "Toggle Focus window" })
