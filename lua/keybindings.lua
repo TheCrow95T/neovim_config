@@ -32,7 +32,7 @@ keymap("n", "<leader>-", "<cmd>split<cr>", { desc = "Horizontal split" })
 
 -- New tab
 keymap("n", "<C-n>", "<cmd>tab split<cr>", { desc = "New tab" })
-keymap("n", "<leader>-", "<cmd>tabnext<cr>", { desc = "Cycle through tab" })
+keymap("n", "<S-j>", "<cmd>tabnext<cr>", { desc = "Cycle through tab" })
 
 -- Toggle focus windows
 keymap("n", "<M-z>", "<cmd>lua require('maximizer').toggle()<cr>", { desc = "Toggle Focus window" })
