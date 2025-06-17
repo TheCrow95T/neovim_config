@@ -36,11 +36,24 @@ return {
 	},
 	{
 		"projekt0n/github-nvim-theme",
-		event = "VeryLazy",
+		lazy = false, -- make sure we load this during startup if it is your main colorscheme
+		priority = 1000, -- make sure to load this before all the other start plugins
 		name = "github-theme",
 		config = function()
-			require("github-theme").setup({})
-			-- vim.cmd("colorscheme github_dark_dimmed")
+			require("github-theme").setup({
+        specs = {
+          github_dark_dimmed = {
+            bg1 = "#2A272B",
+          }
+        },
+				groups = {
+					all = {
+						SnacksIndentScope = { fg = "#e86671" },
+						SnacksIndent = { fg = "#4e505e" },
+					},
+				},
+			})
+			vim.cmd("colorscheme github_dark_dimmed")
 		end,
 	},
 	{
@@ -65,16 +78,15 @@ return {
 	},
 	{
 		"yorik1984/newpaper.nvim",
-		lazy = false, -- make sure we load this during startup if it is your main colorscheme
-		priority = 1000, -- make sure to load this before all the other start plugins
+		event = "VeryLazy",
 		config = function()
-			require("newpaper").setup({
-				style = "dark",
-				colors = {
-					bg = "#292929",
-				},
-			})
-			vim.cmd("colorscheme newpaper")
+			-- require("newpaper").setup({
+			-- 	style = "dark",
+			-- 	colors = {
+			-- 		bg = "#292929",
+			-- 	},
+			-- })
+			-- vim.cmd("colorscheme newpaper")
 		end,
 	},
 	{
@@ -99,10 +111,10 @@ return {
 		"morhetz/gruvbox",
 		event = "VeryLazy",
 	},
-  {
-    "cpea2506/one_monokai.nvim",
+	{
+		"cpea2506/one_monokai.nvim",
 		event = "VeryLazy",
-  },
+	},
 	{
 		"xiantang/darcula-dark.nvim",
 		event = "VeryLazy",
