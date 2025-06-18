@@ -48,6 +48,7 @@ return {
         },
 				groups = {
 					all = {
+            Function = { fg = "#d299ff" },
 						SnacksIndentScope = { fg = "#e86671" },
 						SnacksIndent = { fg = "#4e505e" },
 					},
