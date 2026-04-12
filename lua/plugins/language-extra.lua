@@ -8,27 +8,13 @@ return {
 		---@type RoslynNvimConfig
 		opts = {
 			-- your configuration comes here; leave empty for default settings
-      filewatching = "roslyn"
+      filewatching = "auto"
 		},
-	},
-	{
-		"GustavEikaas/easy-dotnet.nvim",
-		event = "VeryLazy",
-		dependencies = { "nvim-lua/plenary.nvim", "nvim-telescope/telescope.nvim", "neovim/nvim-lspconfig" },
-		config = function()
-			require("easy-dotnet").setup({
-				picker = "snacks",
-			})
-
-			-- keybindings
-			local keymap = vim.keymap.set
-
-			keymap("n", "<leader>dc", "<cmd>Dotnet<CR>", { desc = "Dotnet command" })
-		end,
 	},
 	{
 		"pmizio/typescript-tools.nvim",
 		event = "VeryLazy",
+    enabled = false,
 		dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
 		ft = {
 			"typescript",
@@ -56,7 +42,7 @@ return {
 	},
 	{
 		url = "https://gitlab.com/schrieveslaach/sonarlint.nvim",
-    enabled = true,
+    enabled = false,
 		event = "VeryLazy",
 		ft = { "javascript", "typescript" },
 		dependencies = { "neovim/nvim-lspconfig" },

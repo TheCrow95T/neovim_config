@@ -69,6 +69,20 @@ return {
 		},
 	},
 	{
+		"sudo-tee/opencode.nvim",
+		event = "VeryLazy",
+		config = function()
+			require("opencode").setup({ default_mode = "plan" })
+		end,
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+			-- Optional, for file mentions and commands completion, pick only one
+			"saghen/blink.cmp",
+			-- Optional, for file mentions picker, pick only one
+			"folke/snacks.nvim",
+		},
+	},
+	{
 		"folke/flash.nvim",
 		event = "VeryLazy",
 		vscode = true,

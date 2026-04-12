@@ -8,8 +8,8 @@ return {
 		configs.setup({
 			ensure_installed = {
 				"lua",
-        "bash",
-        "regex",
+				"bash",
+				"regex",
 				"typescript",
 				"javascript",
 				"tsx",
@@ -20,8 +20,9 @@ return {
 				"rst",
 				"css",
 				"json",
-        "markdown",
-        "markdown_inline",
+				"markdown",
+				"markdown_inline",
+				"c_sharp",
 			},
 			highlight = { enable = true },
 			indent = { enable = true },

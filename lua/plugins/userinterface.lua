@@ -169,6 +169,11 @@ return {
 		--- @type PersistQuickfix.Config
 		opts = {},
 	},
+  {
+    "Fildo7525/pretty_hover",
+    event = "LspAttach",
+    opts = {}
+  },
 	{
 		"karb94/neoscroll.nvim",
 		event = "VeryLazy",

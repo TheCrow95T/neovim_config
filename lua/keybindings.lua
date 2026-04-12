@@ -45,12 +45,23 @@ keymap("n", "<leader>lg", "<cmd>LazyGit<CR>", { desc = "LazyGit" })
 keymap("n", "<leader>K", "<cmd>Gitsigns blame_line<CR>", { desc = "gitsign blame line" })
 
 -- lsp keymapping
-keymap("n", "K", vim.lsp.buf.hover, { desc = "Hover" })
+-- keymap("n", "K", vim.lsp.buf.hover, { desc = "Hover" })
+keymap("n", "K", "<cmd>lua require('pretty_hover').hover()<cr>", { desc = "Hover" })
 keymap("n", "gd", vim.lsp.buf.definition, { desc = "Go to definition" })
 keymap("n", "<space>ca", vim.lsp.buf.code_action, { desc = "Code action" })
 keymap("n", "<space>lr", "<cmd>LspRestart<cr>", { desc = "LSP restart" })
 keymap("n", "<space>cr", vim.lsp.buf.rename, { desc = "LSP rename" })
-keymap("n", "<leader>cf", vim.lsp.buf.format, { desc = "Code Formatter" })
+-- keymap("n", "<leader>cf", vim.lsp.buf.format, { desc = "Code Formatter" })
+keymap("n", "<leader>cf", function()
+	require("conform").setup({
+		format_on_save = {
+			-- These options will be passed to conform.format()
+			timeout_ms = 500,
+			lsp_format = "fallback",
+      async = true
+		},
+	})
+end, { desc = "Code Formatter" })
 
 -- Noice dismiss message
 keymap("n", "<leader>dn", "<cmd>NoiceDismiss<CR>", { desc = "Dismiss noice notification" })

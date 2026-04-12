@@ -48,16 +48,7 @@ return {
         },
       },
       sources = {
-        default = { "lsp", "path", "snippets", "easy-dotnet" },
-        providers = {
-          ["easy-dotnet"] = {
-            name = "easy-dotnet",
-            enabled = true,
-            module = "easy-dotnet.completion.blink",
-            score_offset = 10000,
-            async = true,
-          },
-        },
+        default = { "lsp", "path", "snippets" },
       },
       snippets = { preset = "luasnip" },
       fuzzy = {
