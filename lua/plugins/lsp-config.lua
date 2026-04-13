@@ -31,7 +31,6 @@ return {
 					"emmet_language_server",
 					"terraformls",
 					"tflint",
-          "roslyn",
 				},
 			})
 		end,
