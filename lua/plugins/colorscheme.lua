@@ -41,14 +41,14 @@ return {
 		name = "github-theme",
 		config = function()
 			require("github-theme").setup({
-        specs = {
-          github_dark_dimmed = {
-            bg1 = "#2A272B",
-          }
-        },
+				specs = {
+					github_dark_dimmed = {
+						bg1 = "#2A272B",
+					},
+				},
 				groups = {
 					all = {
-            Function = { fg = "#d299ff" },
+						Function = { fg = "#d299ff" },
 						SnacksIndentScope = { fg = "#e86671" },
 						SnacksIndent = { fg = "#4e505e" },
 					},
@@ -119,5 +119,34 @@ return {
 	{
 		"xiantang/darcula-dark.nvim",
 		event = "VeryLazy",
+	},
+	{
+		"rebelot/kanagawa.nvim",
+		event = "VeryLazy",
+		config = function()
+			-- vim.cmd("colorscheme kanagawa-wave")
+		end,
+	},
+	{
+		"3dyuval/retro-fallout.nvim",
+		dependencies = { "3dyuval/colortweak.nvim" },
+		event = "VeryLazy",
+		config = function()
+			require("retro-fallout").setup(function(defaults)
+				local tweak = require("colortweak.color")
+				return {
+					colors = {
+						dimmed = {
+							amber = tweak.transform(defaults.dimmed.amber, { h = -60, s = 0.3, l = 0.7 }),
+							green_dark = tweak.transform(defaults.dimmed.green_dark, { h = -60, l = 2 }),
+						},
+					},
+					ft = {
+						yaml = { h = -90 },
+					},
+				}
+			end)
+			-- vim.cmd.colorscheme("retro-fallout")
+		end,
 	},
 }
