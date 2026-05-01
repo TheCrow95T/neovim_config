@@ -53,13 +53,10 @@ keymap("n", "<space>lr", "<cmd>LspRestart<cr>", { desc = "LSP restart" })
 keymap("n", "<space>cr", vim.lsp.buf.rename, { desc = "LSP rename" })
 -- keymap("n", "<leader>cf", vim.lsp.buf.format, { desc = "Code Formatter" })
 keymap("n", "<leader>cf", function()
-	require("conform").setup({
-		format_on_save = {
-			-- These options will be passed to conform.format()
-			timeout_ms = 500,
-			lsp_format = "fallback",
-      async = true
-		},
+	require("conform").format({
+    timeout_ms = 500,
+    async = true,
+    lsp_format = "fallback",
 	})
 end, { desc = "Code Formatter" })
 
