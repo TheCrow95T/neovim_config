@@ -40,7 +40,7 @@ return {
                 dotnet_provide_regex_completions = true,
               },
               ["csharp|code_lens"] = {
-                dotnet_enable_references_code_lens = true,
+                dotnet_enable_references_code_lens = false,
               },
             },
           },
