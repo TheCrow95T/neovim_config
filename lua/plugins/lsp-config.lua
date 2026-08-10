@@ -1,3 +1,21 @@
+local servers = {
+  "lua_ls",
+  "jsonls",
+  "tsgo",
+  "phpactor",
+  "pyrefly",
+  "ruff",
+  "html",
+  "cssls",
+  "tailwindcss",
+  "eslint",
+  "sqlls",
+  "emmet_language_server",
+  "terraformls",
+  "tflint",
+  "gopls",
+}
+
 return {
   {
     "williamboman/mason.nvim",
@@ -16,22 +34,7 @@ return {
     event = "VeryLazy",
     config = function()
       require("mason-lspconfig").setup({
-        ensure_installed = {
-          "lua_ls",
-          "jsonls",
-          "tsgo",
-          "phpactor",
-          "basedpyright",
-          "ruff",
-          "html",
-          "cssls",
-          "tailwindcss",
-          "eslint",
-          "sqlls",
-          "emmet_language_server",
-          "terraformls",
-          "tflint",
-        },
+        ensure_installed = servers,
       })
     end,
   },
@@ -40,24 +43,6 @@ return {
     event = "VeryLazy",
     config = function()
       local capabilities = require("blink.cmp").get_lsp_capabilities()
-
-      local servers = {
-        "lua_ls",
-        "jsonls",
-        "tsgo",
-        "phpactor",
-        "basedpyright",
-        "ruff",
-        "html",
-        "cssls",
-        "tailwindcss",
-        "eslint",
-        "sqlls",
-        "emmet_language_server",
-        "terraformls",
-        "tflint",
-        -- "roslyn",
-      }
 
       vim.lsp.config("*", {
         flags = {
@@ -110,6 +95,7 @@ return {
           cs = { "csharpier" },
           javascript = { "prettier" },
           typescript = { "prettier" },
+          go = { "goimports", "gofumpt" }
         },
       })
     end,
@@ -122,6 +108,7 @@ return {
       { "nvim-neotest/nvim-nio" },
       { "igorlfs/nvim-dap-view" },
       { "NicholasMata/nvim-dap-cs" },
+      { "leoluz/nvim-dap-go" },
     },
     config = function()
       local dap = require("dap")

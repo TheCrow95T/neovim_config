@@ -23,6 +23,10 @@ return {
 				"markdown",
 				"markdown_inline",
 				"c_sharp",
+        "go",
+        "gomod",
+        "gowork",
+        "gosum"
 			}
 			require("tree-sitter-manager").setup({
 				-- Default Options

@@ -8,8 +8,9 @@ keymap({ "i", "n" }, "<esc>", "<cmd>noh<cr><esc>", { desc = "Escape and Clear hl
 keymap("n", "<leader>rs", ":lua require('persistence').load()<CR>", { desc = "Resume session" })
 
 -- File Browser keybinding
-keymap("n", "<leader>e", "<cmd>lua Snacks.explorer()<CR>", { desc = "Toggle Snacks Explorer" })
 keymap("n", "<C-e>", "<cmd>Yazi<CR>", { desc = "Open Yazi Explorer" })
+keymap("n", "<leader>e", "<cmd>Yazi<CR>", { desc = "Open Yazi Explorer" })
+keymap("n", "<leader>E", "<cmd>lua Snacks.explorer()<CR>", { desc = "Toggle Snacks Explorer" })
 
 -- Bufferline keybindings
 keymap("n", "<S-h>", "<cmd>BufferLineCyclePrev<CR>", { desc = "Go to previous buffer" })
@@ -68,6 +69,7 @@ keymap("n", "<leader>cd", "<cmd>Trouble diagnostics toggle<CR>", { desc = "Troub
 
 -- Open Terminal
 keymap("n", "<C-t>", "<cmd>lua Snacks.terminal.toggle()<CR>", { desc = "Open Snacks Term" })
+keymap("n", "<leader>t", "<cmd>lua Snacks.terminal.toggle()<CR>", { desc = "Open Snacks Term" })
 keymap("t", "<C-t>", "<C-\\><C-n><cmd>lua Snacks.terminal.toggle()<CR>", { desc = "Close Snacks Term" })
 
 -- Quickfix persist keymap
